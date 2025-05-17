@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 import java.util.UUID;
 
 @Entity
+@Table(name = "app_user")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -17,9 +18,12 @@ import java.util.UUID;
 public class User {
     @Id
     @GeneratedValue(generator = "uuid")
-    private UUID id ;
+    private UUID id;
+    @Column(name = "username")
     private String username;
+    @Column(name = "password")
     private String password;
+    @Column(name = "role")
     private String role;
 
 }

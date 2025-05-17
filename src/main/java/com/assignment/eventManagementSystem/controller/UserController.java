@@ -11,6 +11,9 @@ public class UserController {
 
     @GetMapping("hello1")
     public String userHome() {
+//        throw new Exception();
+
+//        throw new RuntimeException("User not found");
         return "Hello World from UserController!";
     }
 
