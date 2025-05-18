@@ -15,7 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class RateLimitingFilter extends OncePerRequestFilter {
 
     private final Map<String, Bucket> cache = new ConcurrentHashMap<>();
-    int rateLimit =4;
+    int rateLimit =1000;
     int durationInHours =1;
 
     private Bucket createBucket() {
